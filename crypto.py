@@ -16,9 +16,8 @@ def Encryption():
                         '\n' + "(Q)uit")
     i = 0
     newString = ''
-    working = True
 
-    while(working):
+    while(True):
 
         encryptList = "LAKSJDHFGMZNXBCVPQOWIEURYT "
         decryptList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
@@ -57,7 +56,7 @@ def Encryption():
 ################################################################################
         if choice.upper() == "Q":
             print "THANKS FOR USING CRYPTO.PY"
-            working = False
+            False
             exit()
 ################################################################################
         else:
