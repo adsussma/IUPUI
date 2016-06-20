@@ -13,7 +13,7 @@ def Encryption():
     choice = raw_input("WOULD YOU LIKE TO:" +
                         '\n' + "(E)NCRYPT" +
                         '\n' + "(D)ECRYPT" +
-                        '\n' + "(Q)uit")
+                        '\n' + "(Q)uit" + '\n')
     i = 0
     newString = ''
 
@@ -23,7 +23,7 @@ def Encryption():
         decryptList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
 ################################################################################
         if choice.upper() == "E":
-            toEncrypt = raw_input("PHRASE TO ENCRYPT: ")
+            toEncrypt = raw_input("PHRASE TO ENCRYPT: " + '\n')
             upEncrypt = toEncrypt.upper()
                                                                                 #MAKE INPUT UPPER TO AVOID ERRORS
             if upEncrypt.isalpha() :
@@ -33,13 +33,13 @@ def Encryption():
                     char = encryptList[b]                                       #IT WITH THE LETTER IN 'encryptList'
                     newString = newString + char                                #WITH THE SAME INDEX. THEN ITERATE TO THE
                     i = i + 1                                                   #NEXT LETTER
-                placeholder = raw_input("ENCRYPTED PHRASE: %s"  %newString)
+                placeholder = raw_input("ENCRYPTED PHRASE: %s" %newString)
                 Encryption()
             else:
                 pass
 ################################################################################
         if choice.upper() == "D":
-            toDecrypt = raw_input("PHRASE TO DECRYPT: ")
+            toDecrypt = raw_input("PHRASE TO DECRYPT: " + '\n')
             upDecrypt = toDecrypt.upper()
 
             if upDecrypt.isalpha():
@@ -49,18 +49,19 @@ def Encryption():
                     char = decryptList[a]
                     newString = newString + char
                     i = i + 1
-                placeholder = raw_input("DECRYPTED PHRASE: %s"  %newString)
+                placeholder = raw_input("DECRYPTED PHRASE: %s" %newString)
                 Encryption()
             else:
                 pass
 ################################################################################
         if choice.upper() == "Q":
-            print "THANKS FOR USING CRYPTO.PY"
+            print "THANKS FOR USING CRYPTO.PY" + '\n'
+            raw_input()
             False
             exit()
 ################################################################################
         else:
-            placeholder = raw_input("NOT A VALID RESPONSE, TRY AGAIN")          #PREVENT USER FROM ERRORS
+            placeholder = raw_input("NOT A VALID RESPONSE, TRY AGAIN" + '\n')          #PREVENT USER FROM ERRORS
             Encryption()
 ################################################################################
 if __name__ == "__main__":
